@@ -1,0 +1,108 @@
+#main_header {
+    //background: url(http://subtlepatterns.com/patterns/redox_01.png);
+    float: left;
+    height: default;
+    margin: 20px 0;
+    width: 100%;
+
+    @include breakpoint(small) {
+        text-align: center;
+        margin: 0;
+    }
+
+    .logo {
+        color: $green;
+        display: inline-block;
+        float: left;
+        font-size: 40px;
+        font-weight: 400;
+        letter-spacing: -0.07em;
+        margin: 30px 0 0 2%;
+
+        @include breakpoint(small) {
+            float: none;
+            font-size: 36px;
+            margin: 25px 0 10px;
+        }
+    }
+    
+    nav {
+
+        ul {
+            clear: none;
+            float: right;
+            margin: 35px 2% 0 0;
+            padding: 0;
+
+            @include breakpoint(medium) {
+                float: right;
+            }
+
+            @include breakpoint(small) {
+                float: none;
+                margin-top: 10px;
+            }
+
+            li {
+                border: solid 1px transparent;
+                border-bottom: solid 2px transparent;
+                border-radius: 4px;
+                display: inline-block;
+                margin-bottom: 10px;
+                transition-property: background, color;
+                transition-duration: .5s;
+                transition-timing-function: ease-in;
+                -moz-transition-property: background, color;
+                -moz-transition-duration: .5s;
+                -moz-transition-timing-function: ease-in;
+                -ms-transition-property: background, color;
+                -ms-transition-duration: .5s;
+                -ms-transition-timing-function: ease-in;
+                -webkit-transition-property: background, color;
+                -webkit-transition-duration: .5s;
+                -webkit-transition-timing-function: ease-in;
+        
+                a {
+                    background-color: rgba(255, 255, 102, 0);
+                    padding: 10px 30px;
+                    transition-property: padding;
+                    transition-duration: .5s;
+                    transition-timing-function: ease-in;
+                    -moz-transition-property: padding;
+                    -moz-transition-duration: .5s;
+                    -moz-transition-timing-function: ease-in;
+                    -ms-transition-property: padding;
+                    -ms-transition-duration: .5s;
+                    -ms-transition-timing-function: ease-in;
+                    -webkit-transition-property: padding;
+                    -webkit-transition-duration: .5s;
+                    -webkit-transition-timing-function: ease-in;
+
+                    @include breakpoint(medium) {
+                        padding: 10px 10px;
+                    }
+
+                    @include breakpoint(small) {
+                        padding: 5px 10px;
+                    }
+                }
+
+                &:hover {
+                    background: #FFF;
+                    background: rgba($grey, .1);
+                    
+                    //border-left: solid 1px #CCC;
+                    border-right: solid 1px #FFF;
+                    border-top: solid 1px #CCC;
+                    border-top: solid 1px rgba(#CCC, .7);
+                    box-shadow: inset 1px 1px 10px 0 rgba(120, 120, 120, .05);
+
+                    a {
+                        color: $green;
+                        text-decoration: none;
+                    }
+                }
+            } 
+        }
+    }
+}

@@ -1,0 +1,40 @@
+// _footer.scss
+
+#main_footer {
+    //background: url(http://subtlepatterns.com/patterns/redox_01.png);
+    float: left;
+    min-height: 40px;
+    padding: 10px 20px;
+    width: 100%;
+
+    @include breakpoint(small) {
+        padding: 10px 15px;
+    }
+
+    > section {
+        float: left;
+        width: 25%;
+
+        @include breakpoint(small) {
+            clear: both;
+            margin: 0 0 15px;
+            width: 100%;
+
+            h1 {
+                text-align: center;
+                width: 100%;
+            }
+            ul {
+
+                li {
+                    text-align: center;
+                    width: 100%;
+
+                    a {
+                        font-size: 1em;
+                    }
+                }
+            }
+        }
+    } 
+}

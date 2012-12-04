@@ -1,0 +1,117 @@
+// _snippets.scss
+
+/* ==========================================================================
+   Colors
+   ========================================================================== */
+$green: #6ea748;
+$grey: rgb(151, 151, 151);
+
+
+/* ==========================================================================
+   Fonts
+   ========================================================================== */
+$droid_sans: 'Droid Sans', sans-serif;;
+
+
+/* ==========================================================================
+   Media Queries
+   * How to use breakpoint
+   * @include breakpoint(large) { width: 60%; }
+   ========================================================================== */
+@mixin breakpoint($point) {
+
+    @if $point == small {
+        @media (max-width: 770px) { @content; }
+    }
+    @else if $point == medium {
+        @media (min-width: 771px) and (max-width: 1250px) { @content; }
+    }
+    @else if $point == large {
+        @media (min-width: 1251px) { @content; }
+    }
+}
+
+/* ==========================================================================
+   Grids
+   ========================================================================== */
+[class*="grid_"] {
+    float: left;
+    position: relative;
+}
+
+// The 1/3rd grid percentage has been tweaked slightly to accommodate for a wider body_content
+// Grid: 1/3
+.grid_1_3 {
+    width: 29%;
+}
+.grid_2_3 {
+    width: 71%;
+}
+
+
+// Grid: 1/4
+.grid_1_4 {
+    width: 25%;
+}
+.grid_2_4 {
+    width: 50%;
+}
+.grid_3_4 {
+    width: 75%;
+}
+
+
+.grid_full {
+    width: 100%;
+}
+
+
+/* ==========================================================================
+   Type
+   ========================================================================== */
+.section_header {
+    color: $green;
+    display: block;
+    float: left;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -0.07em;
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+}
+
+
+
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+ul {
+    clear: both;
+    margin: 0;
+
+    li {
+        background: none;
+        list-style: none;
+        margin: 0;
+        text-transform: uppercase;
+
+        a {
+            color: $grey;
+            display: block;
+            font-size: 14px;
+            font-weight: normal;
+            letter-spacing: 0.05em;
+            padding: 0 0 10px;
+            text-decoration: none;
+
+            &:hover {
+                color: $green;
+                text-decoration: underline;
+            }
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+    }
+}
